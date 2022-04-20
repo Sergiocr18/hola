@@ -18,6 +18,6 @@ La funcion `prompt()` es para solicitar datos al usuario
 
 `console.info()`
 
-### ALGO
+### funciones
 
 `isNaN()`

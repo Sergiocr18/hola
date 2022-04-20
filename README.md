@@ -1,6 +1,8 @@
 # Este es el repositorio de ejercicios de JS
 
-La funcion 'prompt()' es para solicitar datos al usuario
+# sdfse
+
+La funcion `prompt()` es para solicitar datos al usuario
 
 `alert()`
 

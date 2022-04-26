@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				background-color: rgb(75, 70, 70);
+			}
+			button {
+				cursor: pointer;
+			}
+			.rojo {
+				background-color: red;
+			}
+			.azul {
+				background-color: blue;
+			}
+		</style>
+
+		<!-- <script defer src="./file.js"></script>
+		<script defer src="./file1.js"></script> -->
+	</head>
+	<body onload="">
+		<h1 id="title">dgfhgdhh</h1>
+		<p class="asd" name="juan">dfgdgdgd</p>
+		<p id="nombre" class="asd" name="juan">sfsdff</p>
+		<p class="kkkkk">HHHHHHH</p>
+		<p class="kkkkk">HHHHHHH</p>
+		<input type="color" id="color" /><br /><br />
+		<button onclick="cosa()">clic</button>
+		<button onclick="replacecolor()">clic2</button>
+		<button onclick="replacecolor1()">clic3</button>
+		<button
+			id="juanito"
+			onclick="replacecolor2(document.getElementById('color').value,this)"
+		>
+			sendColor
+		</button>
+		<script>
+			// function replacecolor2($color, $botom){
+			// 	console.log($color);
+			// 	botom.style.backgroundColor=$color
+			// 	document.getElementsByTagName('button')[3].style...
+			// }
+			function cosa() {
+				//document.getElementById("title")
+
+				//console.log
+				//alert
+				//document.write
+				// document.getElementsById("nombre").innerHTML = "asd";
+				// document.getElementsById("nombre").innerHTML += "ASD";
+				// document.getElementsById("nombre").style.backgroundColor = "red";
+				// console.log(document.getElementsById("nombre"));
+				// console.log(document.getElementsByClassName("asd"));
+				// console.log(document.getElementsByClassName("asd")[0]);
+				// document.getElementsByClassName("asd")[0].style.backgroundColor = "blue";
+				console.log(document.getElementsByClassName("asd").length);
+				let $cantidad = document.getElementsByClassName("asd").length;
+				for (let $i = 0; $i < $cantidad; $i++) {
+					document.getElementsByClassName("asd")[$i].style.backgroundColor =
+						"green";
+					console.log("$i=" + $i);
+				}
+
+				// document.getElementsByClassName("asd").style.backgroundColor = "blue";
+				// document.getElementsByName() //juan
+				// document.getElementsByClassName;//asd
+				// document.getElementsByName;//name=""
+				document.getElementsByTagName("p")[0].innerHTML = "AAA"; //= (poner etiqueta)
+				document.getElementsByTagName("p")[2].classList.add("rojo");
+				document.getElementsByTagName("p")[2].classList.remove("kkkk");
+				document.getElementsByTagName("p")[3].classList.add("rojo");
+				document.getElementsByTagName("p")[3].classList.replace("rojo", "azul");
+				document.getElementsByTagName("p")[3].classList.replace("azul", "rojo");
+			}
+			let $a = 0;
+			let $text = document.getElementsByTagName("p")[3];
+			function replacecolor() {
+				$a++;
+				if ($a % 2 == 0) {
+					$text.classList.replace("azul", "rojo");
+				} else {
+					$text.classList.replace("rojo", "azul");
+				}
+			}
+			function replacecolor1() {
+				//One time
+				document.getElementByTagName("p")[3].classList.replace("azul", "rojo");
+			}
+			function replacecolor2(color) {
+				console.log(color);
+				document.getElementById("juanito").style.backgroundColor = color;
+			}
+
+			{
+				// $var2 = 3;
+				// $var3 = 4;
+				// $varsalida = $var2 + $var3;
+				// console.log($var2 + "+" + $var3 + "=" + $varsalida);
+				// console.log($var2 + "+" + $var3 + "=" + ($var2 + $var3));
+				// console.log($var2 + "+" + $var3 + "=" + (3 + 4));
+				// console.log($var2 + "+" + $var3 + "=" + 7);
+				// console.log(3 + "+" + 4 + "=" + 7);
+				// console.log("3 + 4 = 7");
+				// _PI = 3.1416;
+				// const _RA = 5;
+				// let $var7 = 25;
+				// // var $var1 = 25;
+				// const _var1 = 25;
+				//  if(3 == 5){console.log("asd")}else{console.log("jkl")}
+				//  3==5?console.log("asd") : console.log("jkl");
+				//  if(3 == 5){console.log("asd")}
+				//  3 == 5 ?? console.log("asd");
+				//  if(! 3==3) {false}
+				//  if(3==3 && 5==3) {}
+				//  if((3==3)&& (5==3)) {}
+				//  if(true && false) {}
+				//  if(+ && -) {false}
+				//  if(3==3 || 5==3) {}
+				//           if(true || false) {true}
+				//           if(3==3 &&  3==5 || 4==2 && 5==7 || 8==8){}
+				//           if(true && false || false && false || true){}
+				// impor files
+			}
+		</script>
+		<br />
+
+		<script>
+			// $var1 = "cosa";
+			// document.write($var1);
+			// console.log(typeof $var1);
+			// function cosa(texto) {
+			// 	alert(texto);
+			// }
+
+			// cosa("otro texto");
+
+			// let $var = 1 + 5 + "texto" + 5 + 1;
+			// console.log($var1);
+			// let $var2 = "texto" + 5 + 1;
+			// console.log($var2);
+
+			// let a, b, c;
+			// console.log(a);
+			// console.log(b);
+			// console.log(c);
+			// a = 1;
+			// b = 2;
+			// c = 3;
+			// console.log(a);
+			// console.log(b);
+			// console.log(c);
+			// // console.log("");
+
+			// let $var1 = 1;
+			// $var1 = 2;
+			// console.log($var1);
+			// cosa1();
+			// function cosa1() {
+			// 	$var1 = 5;
+			// 	console.log($var1);
+			// }
+			// console.log($var1);
+			// _algo;
+			// $algo;
+			// {
+			// 	algo;
+			// }
+
+			// console.log("");
+
+			// var $var2 = 1;
+			// $var2 = 2;
+			// console.log($var2);
+			// cosa2();
+			// console.log($var2);
+			// function cosa2() {
+			// 	$var2 = 5;
+			// }
+			// console.log($var2);
+
+			// const _PI = 3.1416;
+			// _PI = 2; // la _ = es constante
+			// console.log(_PI); // no se puede redefinir
+
+			// function run() {
+			// 	var foo = "foo"; //por defecto
+			// 	let bar = "bar";
+
+			// 	console.log(foo, bar);
+
+			// 	{
+			// 		var moo = "Mooo";
+			// 		let baz = "Bazz";
+			// 		juanito = "pepito"; //por defecto VAR
+			// 		console.log(moo, baz, juanito);
+			// 	}
+
+			// 	console.log(moo);
+			// 	// console.log(juanito); // error
+			// 	// console.log(baz); //error
+
+			// 	let variable65=1
+			// 	{let variable66=1}
+
+			// run();
+		</script>
+	</body>
+</html>

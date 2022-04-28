@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script></script>
+	</head>
+	<body>
+		<script>
+			// let x = 99999999999;
+			// console.log(x);
+			// let y = 99999999999;
+			// console.log(y);
+			// console.log(Number.MAX_VALUE);
+			// console.log((0.2 + 0.1).toPrecision(1));
+			// let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			// console.log(txt.length);
+			// console.log(txt.slice(2, 8)); //extrae una parte
+			// console.log(txt.slice(-12));
+			// console.log(txt.slice(6));
+			// console.log(txt.slice(6, txt.length - 6));
+
+			// console.log(txt.substring(2, 8));//lo mismo, no
+			// console.log(txt.substring(2));
+
+			// let txt = "gshgahsdghsd quesequita MICROSOFT Microsoft";
+			// console.log(text.replace("quesequita", "quesepone"));
+			// console.log(text.replace(/MICROSOFT/i, "W3schools")); // i = por defecto, no cabelcase
+			// console.log(text.replace(/Microsoft/g, "W3schools")); //all
+			//.toUpperCase
+			//.toLowerCase
+
+			let txt1 = " ABC";
+			let txt2 = "DEF ";
+			// console.log(txt1.concat(" X X ", txt2));
+			// console.log(txt1.concat(txt2));
+			// console.log(txt1.concat(" X   X ", txt2).trim()); //limpia espacios
+			// console.log(txt1);
+			// console.log(txt1.trim()); //limpia espacios
+
+			// console.log(txt1.padStart(10, "$"));
+			// console.log(txt2.padStart(10, "$"));
+
+			// console.log(txt1.padEnd(10, "$"));
+			// console.log(txt2.padEnd(10, "$"));
+
+			// console.log(txt1.charAt(2)); //1  caracter
+			// console.log(txt1.charAt(1));
+			// console.log(txt1.charAt(0));
+
+			// console.log(txt1.charCodeAt(2));
+			// console.log(txt1.charCodeAt(1));
+			// console.log(txt1.charCodeAt(0));
+
+			let text = "HELLO WORLD BOB";
+			// console.log(text[0]);
+			// console.log(text[1]);
+			// console.log(text.split(" "));
+			// console.log(text.split(" ")[0]);
+			// console.log(text.split(" ")[1]);
+
+			// console.log(text.indexOf("J")); //-1
+			// console.log(text.indexOf("o")); //no funciona//-1
+			// console.log(text.indexOf("O")); //4
+			// console.log(text.indexOf("O", 5)); //7
+			// console.log(text.lastIndexOf("O")); //13
+			// console.log(text.lastIndexOf("O", 5)); //4
+
+			let text3 = "The rain in SPAIN stays mainly in the plai";
+			console.log(text3.match(/ain/));
+			console.log(text3.match(/ain/g));
+			console.log(text3.includes("rain")); //true
+			console.log(text3.includes("juan")); //false
+			console.log(text3.startsWith("The")); //true
+			console.log(text3.startsWith("Juan")); //false
+			//.endsWith()
+			console.log(text.toString(10)); //recorta
+
+			text3 = text3.trim().toLocaleLowerCase();
+			console.log(text3);
+			console.log(text3.startsWith("the"));
+		</script>
+	</body>
+</html>

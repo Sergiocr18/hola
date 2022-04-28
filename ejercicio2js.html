@@ -1,32 +1,65 @@
 <!DOCTYPE html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Ejercicio 1 - Mostrar mensajes complejos</title>
-<style>
-    body{
-        background-color: #848484;
-    }
-</style>
-<script type="text/javascript">
-    // alert("fdsfsffdsfd aadssad\!a\naddsd\r\n\r\tDsaj");
-    // console.log();
-    // $var1 = prompt("add text");
-    // cosole.log($var1);
-    // console.warm();
-    // console.error();
-    // console.info();
-//    alert(!isNaN(prompt('add number')));//si es numero o no es numero?
-   
-//    var numero = prompt("Introduce un número");
-//    if (isNaN(numero)) {
-//        document.write(numero + " is not a number <br />");
-//    } else {
-//        docunment.write(numero + " is a number <br />");
-//    }
-alert()
-</script>
-</head>
-<body>
-<p>Esta página muestra un mensaje complejo</p>
-</body>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio 1 - Mostrar mensajes complejos</title>
+		<style>
+			body {
+				background-color: #848484;
+			}
+		</style>
+		<script type="text/javascript">
+			// alert("fdsfsffdsfd aadssad\!a\naddsd\r\n\r\tDsaj");
+			// console.log();
+			// $var1 = prompt("add text");
+			// cosole.log($var1);
+			// console.warm();
+			// console.error();
+			// console.info();
+			//    alert(!isNaN(prompt('add number')));//si es numero o no es numero?
+
+			//    var numero = prompt("Introduce un número");
+			//    if (isNaN(numero)) {
+			//        document.write(numero + " is not a number <br />");
+			//    } else {
+			//        docunment.write(numero + " is a number <br />");
+			//    }
+
+			var meses = [
+				"Enero",
+				"Febrero",
+				"Marzo",
+				"Abril",
+				"Mayo",
+				"Junio",
+				"Julio",
+				"Agosto",
+				"Septiembre",
+				"Octubre",
+				"Noviembre",
+				"Diciembre",
+			];
+			alert(meses);
+			for (let $i = 0; $i < meses.length; $i++) {
+				console.log(meses[$i]);
+				alert(meses[$i]);
+			}
+			let meses = meses.length;
+			let i = 0;
+			while (i < meses) {
+				document.write(meses[i] + "<br>");
+				cantidad += "<br>meses" + i;
+				i++;
+			}
+			// let number;
+
+			// do {
+			// 	number = prompt("Dame un puto numero!");
+			// } while (isNaN(number));
+			// alert(number);
+		</script>
+	</head>
+	<body>
+		<p>Esta página muestra un mensaje complejo</p>
+	</body>
 </html>

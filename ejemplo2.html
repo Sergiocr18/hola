@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script defer src="./file.js"></script> -->
+	</head>
+	<body>
+		<p>fsdafsf</p>
+		<script>
+			// let _$juan = 2,
+			// 	$asd = 3,
+			// 	$sdf = "f";
+			// let $button_form_3 = "asd";
+			// let $traductionButtonForm3 = "asd";
+			// let buttonForm3=document.getElementById...;
+			// let number = 569.15654;
+			// document.write(number.toPrecision(1));
+			// document.write("<br><br>");
+			// document.write(6e1);
+			// document.write("<br><br>");
+			// // numeroOld = "6";
+			// // numero = Number(numeroOld);
+			// // document.write(numero + 1);
+			// document.write("<br><br>");
+			// document.write("a=" + typeof numero);
+			// document.write("a=" + valueOf(numero));
+			// document.write("<br><br>");
+			// document.write("6" + "2" + 4 + 2);
+			// document.write("<br>");
+			// document.write(parseInt("6") + parseInt("2") + 4 + 2);
+			// document.write(new Date("1970-01-01"));
+			// document.write("<br><br>");
+			// document.write(Number(new Date("1970-01-01")));
+			// document.write("<br><br>");
+			// document.write(Number(new Date("1970-01-02"))); // se cuenta en milisegundos
+			// document.write("<br><br>");
+			// hoy = Number(new Date("2022-04-27"));
+			// document.write(hoy);
+			// document.write("<br><br>");
+			// ayer = hoy - 86400000 * 31;
+			// document.write(new Date(ayer));
+			// document.write(parseFloat("10.33") + parseFloat("10.33"));
+			// document.write("<br><br>");
+			// document.write(parseFloat("10 years"));
+			// document.write("<br><br>");
+			// document.write(Number.MAX_VALUE);
+			// document.write("<br><br>");
+			// document.write(Number.MIN_VALUE);
+			// document.write("<br><br>");
+			// document.write(Number.POSITIVE_INFINITY); // un valor superior a max value te dara infinity
+			// document.write("<br><br>");
+			// document.write(Number.NEGATIVE_INFINITY); // un valor inferior a min value te dara -infinity
+			// document.write("<br><br>");
+			// document.write(Number.NaN); //te devuelve que no es un numero
+
+			car1 = {
+				type: "BMW",
+				model: "E30",
+				color: "violeta",
+				age: 20,
+				matriculas: ["6857FBC", "6857XBC", "6857JBC"],
+				altura: 1.75,
+				repetir: function () {
+					return this.type + " " + this.model;
+				},
+			};
+			car2 = { type: "BMW", model: "E30", color: "violeta", age: 20 };
+			document.write(car1.type);
+			document.write("<br><br>");
+			document.write(car1["type"]);
+			document.write("<br><br>");
+			document.write(car1["model"]);
+			document.write("<br><br>");
+			document.write(car1["color"]);
+			document.write("<br><br>");
+			document.write(car1["age"]);
+			document.write("<br><br>");
+			document.write(car1["matriculas"][0]);
+			document.write("<br><br>");
+			document.write(car1["matriculas"][1]);
+			document.write("<br><br>");
+			document.write(car1["matriculas"][2]);
+			document.write("<br><br>");
+			document.write(car1["altura"]);
+			document.write("<br><br>");
+			document.write(car1.repetir());
+
+			let cantidad = car1.matriculas.length; // coge el array y cuento todo lo de dentro
+			console.log(cantidad);
+			document.write(cantidad);
+			document.write("<br><br>");
+			for (let i = 0; i < cantidad; i++) {
+				console.log("i=" + i);
+				document.write(car1.matriculas[i] + "<br>"); // + = concatenar
+			}
+			document.write("<br><br>");
+			let cantidad1 = car1.matriculas.length;
+			let i = 0;
+			while (i < cantidad1) {
+				document.write(car1.matriculas[i] + "<br>");
+				cantidad += "<br>matriculas" + i;
+				i++;
+			}
+			let $b = 0;
+			$c = 0;
+			console.log($b--);
+			console.log($b);
+			console.log("");
+			console.log(--$c);
+			console.log($c);
+
+			//para recorrer el array es mejor hacer for
+
+			//document.write()
+		</script>
+	</body>
+</html>

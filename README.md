@@ -10,7 +10,7 @@ La funcion `prompt()` es para solicitar datos al usuario
 
 `if` (condicion){ejecucion}
 
-`funcion cosa`(parametros){ejecucion}
+`funcion "cosa"`(parametros){ejecucion}
 
 Array[]
 
@@ -84,7 +84,16 @@ valor1 ? valor 2 OPERADOR TERNARIO
 
 `toLowerCase` es un metodo para convertir las letras a minuscula
 
-`typeof` nos dice que es esa variable
+`toPrecision` para redondear a 2 decimales /3 decimales, etc...
+
+`Number("6")` transforma el texto en numero
+
+`typeof`nos dice que es esa variable;
+funcion para saber el tipo de variable -> string, float
+
+`valueOf` practicamente lo mismo que la funcion typeof
+
+`new Date`
 
 `los mensajes que te pueden devolver`
 string
@@ -130,8 +139,14 @@ console.log("\\"); //
 
 * multiplicar
   / dividir
-  ++ +1
-  -- -1
+  ++ = +1
+  let $b=0
+  $c=0
+  console.log(5 + $b++);// despues de ejecutar
+  console.log($b);
+  console.log(5 + ++$c); //antes de ejecutar
+  console.log($c);
+  -- = -1
   \*\* Exponente
   % Modulo
 
@@ -159,4 +174,29 @@ y lo ultimo es el script
 `innerHTML` sustituye el ID por el nombre "asd",es modificar el texto interno
 
 `propiedades`
-length = para saber el numero de elementos que tiene un array p.e.
+
+`length` = para saber el numero de elementos que tiene un array p.e.
+
+## {} = indican que va haber objetos
+
+# activadores de eventos # // Event Handlers
+
+document.getElementsByClassName('negra rojo') se puede añadir una clase o varia clases
+
+`slice`se puede acotar entre los numeros y puedes aplicar numeros negativos
+
+`substring` es mas usado que el slice, pero no puedes usar numeros negativos y es menos costoso informaticamente
+
+`padStart` rellena los espacio de antes de la palabra o numero; ej->con lo que quieras(5, "$")
+
+`padEnd`rellena los espacios de despues de la palabra o numero
+
+`prim` rellena espacios
+
+`chartAt` señala una posicion en concreto
+
+`chartCode` posicion concreta en la lista de UTF-8
+
+`split` muestra la palabra ubicada en esa posicion
+
+`indexOf` te da la posicion que ocupa

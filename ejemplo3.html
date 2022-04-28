@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head> </head>
+	<body onload="fun4()">
+		<p id="p_1">P_1</p>
+		<p id="p_2">P_2</p>
+		<p id="p_3">P_3</p>
+		<p id="p_4">P_4</p>
+		<button onclick="fun1()">1</button>
+		<button onmouseover="fun2()" onmouseout="fun3()">2</button>
+		<!-- onsubmit="Validation()" -->
+		<form method="GET" action="#" name="myForm" target="_blank">
+			Name:
+			<input
+				type="text"
+				id="fname"
+				onmouseout="validateForm()"
+				onkeyup="validateForm()"
+			/>
+			<input type="submit" id="submit" value="submit" disabled />
+		</form>
+		<br />
+		<br />
+		<button onclick="window.print()">Print this page</button>
+		<script>
+			//Event Handlers
+			// // onsubmit
+			// // onkeyup
+			// // onmouseout
+			// // onkeypress
+			function validateForm() {
+				console.log("cosa");
+				let x = document.forms["myForm"]["fname"].value;
+				if (x == "") {
+					//alert("Name must be filled out");
+					document.getElementsById("submit").disabled = true;
+				} else {
+					document.getElementsById("submit").disabled = false;
+					//document.myForm.submit():
+				}
+			}
+			function Validation() {
+				let texto = document.getElementById("name").innerHTML;
+				console.log(texto);
+				return true;
+			}
+			// // onclick
+			function fun1() {
+				document.getElementById("p_1").style.backgroundColor = "blue";
+			}
+			// // onmouseover
+			function fun2() {
+				document.getElementById("p_2").style.backgroundColor = "green";
+			}
+			// // onmouseout
+			function fun3() {
+				document.getElementById("p_3").style.backgroundColor = "orange";
+				// //onload
+			}
+			function fun4() {
+				document.getElementById("p_4").style.backgroundColor = "red";
+			}
+
+			document.getElementsByClassName("negra rojo");
+		</script>
+		<a class="negra"></a>
+	</body>
+</html>

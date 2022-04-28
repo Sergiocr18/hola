@@ -4,10 +4,16 @@
 <title>Ejercicio 1 - Mostrar mensajes complejos</title>
 <script type="text/javascript">
     var numero1= prompt("Introduce un número");
-if(isNaN(numero1)){
-	document.write("es mayor");
-}else{1
-}
+    if (numero1 != "" && !isNaN(numero1)) {
+				console.log("aaa"); // para comprobar
+				if (numero1 > 99999999) {
+					document.write("Es mayor a 99999999");
+				} else if (numero1 < 0) {
+					document.write("Es menor a 0");
+				}
+			} else {
+				document.write("no es un numero");
+			}
 </script>
 </head>
 <body>

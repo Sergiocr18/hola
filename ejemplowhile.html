@@ -1,0 +1,35 @@
+<html>
+	<head> </head>
+	<body>
+		<script>
+			let number;
+
+			let vueltas;
+			do {
+				vueltas = prompt("cuantos numeros quiere introducir?");
+			} while (vueltas == "" || isNaN(vueltas));
+			let arrayOld = [];
+			let promedio = 0;
+			for (let i = 0; i < vueltas; i++) {
+				let number;
+				do {
+					do {
+						number = prompt("Dame un numero!");
+					} while (number == "" || isNaN(number));
+				} while (
+					!(
+						confirm(
+							'Estas seguro que quieres poner el numero "' + number + '"?'
+						) == true
+					)
+				);
+				arrayOld.push(number);
+				promedio += parseInt(number);
+				//document.write("OK " + number);
+			}
+			document.write(arrayOld + "Prom:" + promedio / arrayOld.length);
+
+			throw new Error("Fin de codigo");
+		</script>
+	</body>
+</html>

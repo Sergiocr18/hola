@@ -2,14 +2,13 @@
 <html>
 	<head>
 		<!-- <script defer src="./sdkfng"></script> -->
-		<script></script>
 	</head>
 	<body>
-		<form id="miFormulario" action="javascript:informar('GET','sitio.html')">
+		<!-- <form id="miFormulario" action="javascript:informar('GET','sitio.html')">
 			<input type="num" name="number" />
 			<input type="submit" />
 		</form>
-		<script>
+	<script>
 			function informar(method, url) {
 				let number = document.getElementsByName("number")[0].value;
 				//alert(number != "");
@@ -42,5 +41,14 @@
 			form.action = url;
 			form.submit();
 		}
-	}
+	} -->
+</script>
+<script>
+	let number;
+	do {
+		do {
+			number = prompt("Dame un numero!");
+		} while (isNaN(number));
+	} while (confirm("Estas seguro?") == true);
+	console.log(number);
 </script>

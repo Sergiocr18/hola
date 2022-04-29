@@ -70,7 +70,7 @@ valor1 ? valor 2 OPERADOR TERNARIO
 
 `\r` otra manera de salto de linea y y tambien sirve para que se coloque al principio de linea
 
-`isNaN()` determina cuando el valor es NaN o no
+`isNaN()` determina cuando el valor es numero o no
 
 `alert()` mostrar mensaje
 

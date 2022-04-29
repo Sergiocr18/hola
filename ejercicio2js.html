@@ -40,23 +40,31 @@
 				"Diciembre",
 			];
 			alert(meses);
+
+			// 2.2
 			for (let $i = 0; $i < meses.length; $i++) {
 				console.log(meses[$i]);
 				alert(meses[$i]);
 			}
-			let meses = meses.length;
-			let i = 0;
-			while (i < meses) {
-				document.write(meses[i] + "<br>");
-				cantidad += "<br>meses" + i;
-				i++;
-			}
+
+			// 2.1
+			// let months = meses.length;
+			// let i = 1;
+
+			// while (i < months) {
+			// 	alert(meses[i]);
+			// 	i++;
+			// }
+
 			// let number;
 
 			// do {
 			// 	number = prompt("Dame un puto numero!");
 			// } while (isNaN(number));
 			// alert(number);
+
+			// 2.3;
+			meses.forEach((meses) => alert(meses));
 		</script>
 	</head>
 	<body>

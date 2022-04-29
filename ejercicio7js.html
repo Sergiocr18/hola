@@ -1,17 +1,58 @@
 <!DOCTYPE html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Ejercicio 1 - Mostrar mensajes complejos</title>
-<script type="text/javascript">
-    var numero1= prompt("Introduce un número");
-if(isNaN(numero1)){
-	document.write(numero1 > 99999, "es mayor");
-}else{
-	document.write(numero1 < 0, "es menor" );
-}
-</script>
-</head>
-<body>
-<p>Esta página muestra un mensaje complejo</p>
-</body>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio 1 - Mostrar mensajes complejos</title>
+		<script type="text/javascript">
+			var letras = [
+				"T",
+				"R",
+				"W",
+				"A",
+				"G",
+				"M",
+				"Y",
+				"F",
+				"P",
+				"D",
+				"X",
+				"B",
+				"N",
+				"J",
+				"Z",
+				"S",
+				"Q",
+				"V",
+				"H",
+				"L",
+				"C",
+				"K",
+				"E",
+				"T",
+			];
+			// // var numero = 5;
+			// alert(letras[numero % 23]);
+
+			var numero1 = prompt("Introduce un número");
+			console.log(numero1);
+			if (isNaN(numero1)) {
+				document.write(
+					numero1,
+					"no es mas pequeño que 0 y no es mas grande que 99999999"
+				);
+			} else {
+				if (numero1 < 0 || numero1 > 99999999) {
+					document.write;
+					{
+						numero1 + "es un numero de DNI" + letras;
+					}
+				} else {
+					document.write, "Su DNI es: " + numero1 + letras[numero1 % 23];
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<p>Esta página muestra un mensaje complejo</p>
+	</body>
 </html>

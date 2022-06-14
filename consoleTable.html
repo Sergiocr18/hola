@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+			console.table(["objeto1", "objeto2", "objeto3"]);
+			console.log(document.cookie.split("; "));
+			console.table(document.cookie.split(";"));
+			console.table(document.cookie.split(";").map((s) => s.trim().split("=")));
+
+			let car1 = { name: "Honda", modelo: "civic", campo: null };
+			let car2 = { name: "Seat", modelo: "ibiza" };
+			let array = [car1, car2];
+
+			for (let i = 0; i < array.length; i++) {
+				console.log(array[i]);
+			}
+
+			console.table(array);
+
+			console.log(car1.name.split("o"));
+			let car1s = "name: Honda, modelo: Civic";
+			console.log(car1s);
+			console.log(car1s.split(","));
+
+			console.time("for loop");
+			for (let i = 0; i < 1000; i++) {
+				// some code
+				console.table(array);
+			}
+			console.timeEnd("for loop");
+
+			console.time("while loop");
+			let a = 0;
+			while (a < 1000) {
+				a++;
+			}
+			console.timeEnd("while loop");
+		</script>
+	</body>
+</html>

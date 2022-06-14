@@ -30,29 +30,28 @@
 				"E",
 				"T",
 			];
-			// // var numero = 5;
-			// alert(letras[numero % 23]);
+			var numero = 7;
+			alert(letras[numero % 23]);
 
-			var numero1 = prompt("Introduce un número");
-			console.log(numero1);
-			if (isNaN(numero1)) {
+			var numero = prompt("Introduce un número");
+
+			if (numero != "" && !isNaN(numero)) {
 				document.write(
-					numero1,
+					numero,
 					"no es mas pequeño que 0 y no es mas grande que 99999999"
 				);
 			} else {
-				if (numero1 < 0 || numero1 > 99999999) {
+				if (numero < 0 || numero > 99999999) {
 					document.write;
 					{
-						numero1 + "es un numero de DNI" + letras;
+						numero + letras;
 					}
 				} else {
-					document.write, "Su DNI es: " + numero1 + letras[numero1 % 23];
+					document.write;
+					"Su DNI es: " + numero + letras[numero % 23];
 				}
 			}
 		</script>
 	</head>
-	<body>
-		<p>Esta página muestra un mensaje complejo</p>
-	</body>
+	<body></body>
 </html>

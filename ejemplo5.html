@@ -7,48 +7,129 @@
 		<!-- <form id="miFormulario" action="javascript:informar('GET','sitio.html')">
 			<input type="num" name="number" />
 			<input type="submit" />
-		</form>
-	<script>
-			function informar(method, url) {
-				let number = document.getElementsByName("number")[0].value;
-				//alert(number != "");
-				if (number == "" || isNaN(number)) {
-					alert("Number please!");
-				} else {
-					let form = document.getElementById("miFormulario");
-					form.method = "GET";
-					form.action = url;
-					form.submit();
+		</form> -->
+		<script>
+			// function informar(method, url) {
+			// 	let number = document.getElementsByName("number")[0].value;
+			// 	//alert(number != "");
+			// 	if (number == "" || isNaN(number)) {
+			// 		alert("Number please!");
+			// 	} else {
+			// 		let form = document.getElementById("miFormulario");
+			// 		form.method = "GET";
+			// 		form.action = url;
+			// 		form.submit();
+			// 	}
+			// }
+
+			//1:pedir un numero
+			//2:comprobar que es un numero
+			//3:if mayor a 10 o no
+			// let cosa = "a";
+			// function name1(params, param1, param2) {
+			// 	let total, spliter, var3, var4, var5;
+			// 	console.log(params);
+			// 	total = new Number(param1) + parseInt(param2);
+			// 	var1 = param1 + "+" + param2 + "=" + total;
+			// 	//2: comprobar que es un numero
+			// 	//3: if mayor a 10 o no
+			// }
+
+			// function copyPrompt(texto) {
+			// 	return prompt(texto);
+			// }
+
+			// let cosa = copyPrompt("ASDF");
+			// alert(cosa);
+
+			// let cinco = prompt("");
+			// alert(cosa);
+
+			// function funcionx(param1, param2) {
+			// 	alert(param1 + param2);
+			// }
+			// function funcionD(param1) {
+			// 	alert(param1);
+			// }
+
+			// let array = [1,2,3,4,["uno","dos","tres","cuatro"]]; array.length;
+			// alert(array[3])
+			// alert(array[4][3])
+
+			let posicion = 0;
+
+			const array = ["uno", "dos", "tres"];
+			const posicionesMax = array.length;
+			function funcioncosa1(param) {
+				posicion = posicion + param;
+				if (posicion > posicionesMax) {
+					console.log("OUT1");
+					posicion = 1;
 				}
+				console.log(posicion);
+				document.getElementById("laP").innerHTML = array[posicion - 1];
+
+				if (posicion < posicionesMax) {
+					posicion = 5;
+				}
+				console.log(posicion);
+				document.getElementById("laP").innerHTML = array[posicion - 3];
 			}
+			// function funcioncosa2(param) {
+			// 	posicion = posicion + param;
+			// 	if (posicion < posicionesMax) {
+			// 		console.log("OUT2");
+			// 		posicion = 5;
+			// 	}
+			// 	console.log(posicion);
+			// 	document.getElementById("laP").innerHTML = array[posicion - 3];
+			// }
 		</script>
+		<p id="laP"></p>
+		<button onclick="funcioncosa1(+1)">+1</button>
+		<button onclick="funcioncosa1(-1)">-1</button>
+		<!-- <p>inner</p>
+		<input type="text" id="inputId" value="ASD" />
+		<button onclick="name1(document.getElementById('inputID').value,1,2)">
+			eje
+		</button>
+		<script></script>
+		<button onclick="alert(prompt('dame algo payo:')+prompt('text2'))">
+			prompt1
+		</button>
+		<button onclick="funcionx(prompt('dame algo payo:'),prompt('text2'))">
+			prompt2
+		</button>
+		<button onclick="funcionD(prompt('dame algo payo:')+prompt('text2'))">
+			prompt3
+		</button> -->
 	</body>
 </html>
 
-<form id="miFormulario" method="GET" action="javascript:informar('sitio.html')">
+<!-- <form id="miFormulario" method="GET" action="javascript:informar('sitio.html')">
 	<input type="num" name="number" />
 	<input type="submit" />
-</form>
+</form> -->
 <script>
-	function informar(url) {
-		let number = document.getElementsByName("number")[0].value;
-		//alert(number != "");
-		if (number == "" || isNaN(number)) {
-			alert("Number please!");
-		} else {
-			let form = document.getElementById("miFormulario");
-			// form.method = "GET";
-			form.action = url;
-			form.submit();
-		}
-	} -->
+	// function informar(url) {
+	// 	let number = document.getElementsByName("number")[0].value;
+	// 	//alert(number != "");
+	// 	if (number == "" || isNaN(number)) {
+	// 		alert("Number please!");
+	// 	} else {
+	// 		let form = document.getElementById("miFormulario");
+	// 		// form.method = "GET";
+	// 		form.action = url;
+	// 		form.submit();
+	// 	}
+	// } -->
 </script>
 <script>
-	let number;
-	do {
-		do {
-			number = prompt("Dame un numero!");
-		} while (isNaN(number));
-	} while (confirm("Estas seguro?") == true);
-	console.log(number);
+	// let number;
+	// do {
+	// 	do {
+	// 		number = prompt("Dame un numero!");
+	// 	} while (isNaN(number));
+	// } while (confirm("Estas seguro?") == true);
+	// console.log(number);
 </script>

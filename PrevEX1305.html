@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Prev EX 1305</title>
+        <script>
+            let input1= false,
+             input2= false,
+             input3= true,//false
+             input4= true;//false
+
+            function checkbutton(params) {
+                if (input1&&input2&&input3&&input4) {
+                    formulario.campoButton.disabled = false;
+                }else{
+                    formulario.campoButton.disabled = true
+                }
+
+            }
+
+        </script>
+		<script defer scr="./PrevEX.js"></script>
+		<form id="formulario">
+		<input type="text" name="texto1" onkeyup="form1(this.value)" />
+		<input type="text" name="texto2" id="salida" disabled />
+		<br />
+		<br />
+	
+		<script type="text/javascript">
+
+            // document.getElementById("texto1").style = background-color"red"
+            const inputSalida=formulario.salida;
+			function form1(numero) {
+				try {
+                    inputSalida.value = eval(numero);
+                    input1=true
+                    checkbutton()
+					// console.log(eval(numero));
+				} catch (err) {
+                    inputSalida.value = "";
+                    input1 = false;
+                    checkbutton()
+                }
+			}
+		
+		</script>
+        <br />
+        <br />
+        <input type="text" onkeyup="form2(this.value)" />
+        <input type="text" id="nombreyApellidos" />
+        <script>
+            	function form2(apellido1) {
+                    // replace(/ /g, "")
+                let totalPalabras = apellido1.trim().split(" ")
+				console.log(totalPalabras);
+                if(totalPalabras.length == 3 && 
+                totalPalabras[0].length>=3 &&
+                totalPalabras[1].length>=3 &&
+                totalPalabras[2].length>=3 
+                ) {
+                    if(totalPalabras[1] != totalPalabras[2]) {
+                        formulario.nombreYApellidos.style.backgroundColor = "green"
+                        input2=true
+                        checkbutton()
+                        console.log("OK");
+                    }else{
+                        formulario.nombreYApellidos.style.backgroundColor = "red"
+                        input2=true
+                        checkbutton()
+                        //los apellidos son iguales
+                    }
+                } else{
+                    //incorrecto
+                }
+			 }
+        </script>
+        <br />
+        <br />
+        <input type="text" onkeyup="form3(this.value)"/>
+        <input type="text" id="salidaCodigo" />
+        <input type="text" id="salidaFormateada" />
+        <script>
+            function form3(texto) {
+                let textoLimpio=texto.trim();
+                textoLimpio=textoLimpio
+
+                .replaceAll("&lt;","<")
+                .replaceAll("&gt;",">")
+                .replaceAll("&quot;",'"')
+                .replaceAll("&#39;","'")
+                .replaceAll("&#191;",'¿')
+                console.log(textoSalida)
+                formulario.salidaCodigo.value = textoLimpio;
+                //formulario.salidaFormateada.value = textoSalida;
+            }
+        </script>
+        <input type="button" value="Enviar" id="campoButton" dissabled/>
+	</head>
+	<body></body>
+</html>

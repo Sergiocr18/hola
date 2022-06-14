@@ -4,20 +4,36 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>Ejercicio 1 - Mostrar mensajes complejos</title>
 		<script type="text/javascript">
-			var numero1 = prompt("Introduce un número");
-			if (numero1 != "" && !isNaN(numero1)) {
-				console.log("aaa"); // para comprobar
-				if (numero1 > 10) {
-					document.write("Es mayor a 10");
-				} else if (numero1 < 10) {
-					document.write("Es menor a 10");
+			//1: pide un numero
+			//2: comprovar que es un numero
+			//if mayor a 10 o no
+			// var numero1 = prompt("Introduce un número");
+			function funcion1(numero1) {
+				if (numero1 != "" && !isNaN(numero1)) {
+					if (numero1 > 10) {
+						// document.write("Es mayor a 10");
+						return +"es mayor a 10<br>";
+					} else if (numero1 < 10) {
+						// document.write("Es menor a 10");
+						return +"es menor a 10<br>";
+					}
+				} else {
+					// document.write("no es un numero");
+					return "es vacio o es un texto<br>";
 				}
-			} else {
-				document.write("no es un numero");
 			}
+			console.assert(funcion1("") == "es vacio o es un texto<br>"); //error
+			console.assert(funcion1("a") == "es vacio o es un texto<br>");
+			console.assert(funcion1("15") == " es mayor a 10<br>");
+			console.assert(funcion1("5") == " es menor a 10<br>");
 		</script>
+		<p id="texto"></p>
+		<br />
+		<button
+			onclick="document.getElementById('texto').innerHTML+=funcion1(prompt('add un texto:'))"
+		>
+			prompt
+		</button>
 	</head>
-	<body>
-		<p>Esta página muestra un mensaje complejo</p>
-	</body>
+	<body></body>
 </html>

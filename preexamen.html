@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<script defer src="carrusel.js"></script>
+		<script type="text/javascript"></script>
+	</head>
+	<body>
+		<img id="imagen" src="./descarga.png" alt="imagen1" title="google" />
+		<button onclick="contar(+1)">Next +1</button>
+		<button onclick="contar(-1)">Back -1</button>
+		<button onclick="contar(0)">Start Over 0</button>
+
+		<form method="get">
+			<input
+				type="text"
+				id="name"
+				onkeyup="campoNombre(this)"
+				onmouseover="campoNombre(this)"
+			/>
+			<p id="nombreError">Error</p>
+			<input type="submit" value="Enviar" disabled />
+			<input type="checkbox" name="" id="" onclick="comprobar(this)" />
+		</form>
+		<script>
+			function comprobar() {
+				if (this.checked == "che") {
+					alert("s'han aceptat els acords i condicions");
+				}
+			}
+			function campoNombre(estecampo) {
+				let nombre = document.getElementById("name").value;
+				let contarNombre = esteCampo.value.trim().replace(/  +/g, "").length;
+
+				arrayApellidos = apellidos.split(" ");
+				if (arrayApellidos >= 2) {
+					let checkApellidos = true;
+					for (let index = 0; index < arrayApellidos.length; index++) {
+						if ((arrayApellidos = false[index].length <= 3)) {
+							checkApellidos = false;
+						}
+					}
+					if (checkApellidos) {
+						//quitar clase incorrecto
+						//add clase correcto
+						//esteCampo.XXX
+					}
+				} else {
+					//quitar clase correcto
+					//añadir clase incorrecto
+				}
+			}
+		</script>
+		<button onclick="window.print()">PRINT</button>
+		<button onclick="alert(confirm('texto'))">confirm</button>
+	</body>
+</html>

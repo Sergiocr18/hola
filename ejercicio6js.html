@@ -1,22 +1,39 @@
 <!DOCTYPE html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Ejercicio 1 - Mostrar mensajes complejos</title>
-<script type="text/javascript">
-    var numero1= prompt("Introduce un número");
-    if (numero1 != "" && !isNaN(numero1)) {
-				console.log("aaa"); // para comprobar
-				if (numero1 > 99999999) {
-					document.write("Es mayor a 99999999");
-				} else if (numero1 < 0) {
-					document.write("Es menor a 0");
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio 1 - Mostrar mensajes complejos</title>
+		<script type="text/javascript">
+			function funcion1(numero1) {
+				// console.log(numero1);
+				if (numero1 != "" && !isNaN(numero1)) {
+					//SOLO NUMEROS
+					// console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+					if (numero1 < 0 || numero1 > 99999999) {
+						// document.write("Es mayor a 99999999");
+						return numero1 + " cumple<br>";
+					}
+					return numero1 + " no cumple<br>";
+				} else {
+					return false + "<br>";
 				}
-			} else {
-				document.write("no es un numero");
 			}
-</script>
-</head>
-<body>
-<p>Esta página muestra un mensaje complejo</p>
-</body>
+			console.assert(funcion1("") == false + "<br>"); //error
+			console.assert(funcion1("a") == false + "<br>");
+			console.assert(funcion1(-1) == "-1 cumple" + "<br>");
+			console.assert(funcion1(0) == false + "<br>");
+			console.assert(funcion1(1) == "1 no cumple" + "<br>");
+			console.assert(funcion1(99999998) == "99999998 no cumple" + "<br>");
+			console.assert(funcion1(99999999) == "99999999 no cumple" + "<br>");
+			console.assert(funcion1(100000000) == "100000000 cumple" + "<br>"); //error // las comillas son para escribir un mensaje que te ayude
+		</script>
+		<p id="texto"></p>
+		<br />
+		<button
+			onclick="document.getElementById('texto').innerHTML+=funcion1(prompt('add un texto:'))"
+		>
+			prompt
+		</button>
+	</head>
+	<body></body>
 </html>

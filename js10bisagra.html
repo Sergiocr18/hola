@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio 1 - Mostrar mensajes complejos</title>
+		<script type="text/javascript"></script>
+		<style></style>
+	</head>
+	<body>
+		<script>
+			function funcion1() {
+				document.bgColor = "red";
+			}
+
+			function funcion2() {
+				document.bgColor = "blue";
+			}
+			// //onmouseover
+			function funcion3() {
+				document.bgColor = "green";
+			}
+			// //onmouseout
+			function funcion4() {
+				document.bgColor = "yellow";
+			}
+			// //onload
+			function funcion5() {
+				document.bgColor = "grey";
+			}
+			function funcion6() {
+				document.bgColor = "white";
+			}
+		</script>
+		<p id="texto1"></p>
+		<button
+			onmouseover="funcion1()"
+			onmouseout="funcion6()"
+			style="background-color: red"
+		>
+			rojo
+		</button>
+		<p id="texto2"></p>
+		<button
+			onmouseover="funcion2()"
+			onmouseout="funcion6()"
+			style="background-color: blue"
+		>
+			azul
+		</button>
+		<p id="texto3"></p>
+		<button
+			onmouseover="funcion3()"
+			onmouseout="funcion6()"
+			style="background-color: green"
+		>
+			verde
+		</button>
+		<p id="texto4"></p>
+		<button
+			onmouseover="funcion4()"
+			onmouseout="funcion6()"
+			style="background-color: yellow"
+		>
+			amarillo
+		</button>
+		<p id="texto5"></p>
+		<button
+			onmouseover="funcion5()"
+			onmouseout="funcion6()"
+			style="background-color: grey"
+		>
+			gris
+		</button>
+	</body>
+</html>

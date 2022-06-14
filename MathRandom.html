@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Math Random</title>
+		<script>
+			var characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+			var result = "";
+
+			var charactersLength = characters.length;
+
+			for (var i = 0; i < 5; i++) {
+				result += characters.charAt(
+					Math.floor(Math.random() * charactersLength)
+				);
+			}
+
+			document.getElementById("demo").innerHTML = result;
+
+			let characters =
+				"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+			let result = "";
+
+			let length = 10; // Customize the length here.
+
+			for (let i = length; i > 0; --i)
+				result +=
+					characters[Math.round(Math.random() * (characters.length - 1))];
+
+			console.log(result);
+
+			document.getElementById("demo").innerHTML = Math.abs(Math.trunc(8.76));
+
+			var myObj = { name: "John", age: 31, city: "New York" };
+			var myJSON = JSON.stringify(myObj);
+			// document.getElementById("demo").innerHTML = myJSON;
+			window.location =
+				"https://www.w3schools.com/jsref/demo_json.php?x=" + myJSON;
+
+			var jsObject = { name: "John", age: 31, city: "New York" }; //35 Object
+			//TO JSON
+			var myJSON = JSON.stringify(jsObject);
+			console.log(myJSON);
+			//TO JS Object
+			var string = JSON.parse(myJSON);
+			console.log(string);
+
+			// // examen Test // let x = 5; // { // let = 4; // return x // } //
+			// console.log(x); // var y = 5; // function a(y) { // var y = 4; // return a() //
+			// } // a(); // console.log(y);
+			// <!--
+		</script>
+		<ul id="myList">
+			<li>Coffe</li>
+			<li>Tea</li>
+		</ul>
+		<button onclick="myFunction()">Append</button>
+	</head>
+</html>

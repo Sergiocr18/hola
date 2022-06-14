@@ -8,7 +8,7 @@ La funcion `prompt()` es para solicitar datos al usuario
 
 ### Console
 
-`if` (condicion){ejecucion}
+`if` (condicion){ejecucion} pregunta varias cosas
 
 `funcion "cosa"`(parametros){ejecucion}
 
@@ -191,7 +191,7 @@ document.getElementsByClassName('negra rojo') se puede añadir una clase o varia
 
 `padEnd`rellena los espacios de despues de la palabra o numero
 
-`prim` rellena espacios
+`trim` rellena espacios
 
 `chartAt` señala una posicion en concreto
 
@@ -200,3 +200,142 @@ document.getElementsByClassName('negra rojo') se puede añadir una clase o varia
 `split` muestra la palabra ubicada en esa posicion
 
 `indexOf` te da la posicion que ocupa
+
+`switch` CASE 3 "condicion":**_ BREAK;
+"A":_**
+CASE TypeOff "NUMBER":\_\_\_
+TypeOff"STR"
+Default:\_\_\_\_
+
+## corregir facil del examen js
+
+// modo facil password
+
+// const mayuscula = /[A-Z]/;
+// const minuscula = /[a-z]/;
+// const numero = /[0-9]/;
+// const caracter = /[!@#\$%\^\&*\)\(+=._-]/;
+// function letras(texto) {
+// let var1 = false;
+// let var2 = false;
+// let var3 = false;
+// let var4 = false;
+// if (mayuscula.test(texto)) console.log("mayuscula"); var1=true
+// if (mayuscula.test(texto)) console.log("minuscula"); var2=true
+// if (mayuscula.test(texto)) console.log("numero"); var3=true
+// if (mayuscula.test(texto)) console.log("caracter"); var4=true
+// if (var1 && var2 && var3 && var4) {
+// return true;
+// }
+// return false;
+// };
+
+## Arrays
+
+### Funciones basicas
+
+crear array
+`const fruits = ["Banana", "Orange", "Apple", "Mango"];`
+
+Convertir a texto
+`.toString()`
+
+### X
+
+concatenar 2 arrays:
+
+`let array3 = array1.concat(array2)`
+
+`array1.concat(array2)`
+
+`array1.concat(array2,array3)`
+
+`array1.concat("texto")`
+
+`array.splice(2,0,"a","b")`
+
+##########################
+
+necesitaremos un if crear una cookie
+if(navigator.cookieEnabled){
+//Se pueden crear
+}
+navegador conectado a internet = false es no
+
+comprobar si la pagina es enabled = false
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = navigator.javaEnabled();
+</script>
+
+`try`{pones lo quieras ejecutar, lo que sea}
+
+`catch`(Document.Write){ECHO, Print, console.log, etc...}si falla el try, entra al catch
+ERRO
+ENK
+`finally`{}
+
+# Objetos JS
+
+`math.abs()`me devolvera el valor absoluto
+`math.asin()` da entre 0 y 165
+`math.ceil()`valor redondealo al valor superior
+`math.max()`el mayor entre 2 numeros
+`math.min()`el menor de 2 numeros
+`math.random()`genera cualquier numero entre 0 y 1 o de los numeros que pongas tu
+ejemplos:
+
+<script>
+function generateRandomInt(min,max){
+x = Math.floor((Math.random() *(max-min)) +min );
+document.getElementById("demo").innerHTML = x
+}
+generateRandomInt(200,900)
+
+</script>
+
+`math.round()`redondea el numero mas cercano
+`math.trunc()`quita todos los numeros decimales
+
+# JSON
+
+`stringify()`lo pasa de texto a objeto;
+ejemplo:
+texto "{ name: 'John', age: 31, city: 'New York' }"
+objeto { name: "John", age: 31, city: "New York" };
+
+`parse()` lo pasa de objeto a texto;
+ejemplo:
+objeto { name: "John", age: 31, city: "New York" };
+texto "{ name: 'John', age: 31, city: 'New York' }";
+
+######
+
+VAR
+CLASS
+CODE
+ASSERT
+LOGS
+
+`MVC` modelo vista controlador
+Objetos HTML Code
+
+#################################
+
+`caja blanca`lo testeas cuando te sabes el codigo,
+`caja negra` vas a ciegas, que no te sabes el codigo, haces los asserts ante de todo,testea un funcion que no conoces
+primero se hace la caja negra y despues la caja blanca, la suma de todo te da la `caja gris`
+
+`mdn` documentacion oficial le haces la prueba y puede salir error
+
+# Pruebas de Usabilidad
+
+`front-end` parte de la web que interactua con los usuarios
+
+`back-end`parte que se conecta a la base de datos
+
+`f.jest` hacer testeo
+
+`Las pruebas de usabilidad`consisten en seleccionar a un grupo de usuarios de una aplicación y solicitarles que lleven a cabo las tareas para las cuales fue diseñada, en tanto el equipo de diseño, desarrollo y otros involucrados toman nota de la interacción, particularmente de los errores y dificultades con las que se ...

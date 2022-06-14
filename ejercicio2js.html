@@ -39,13 +39,27 @@
 				"Noviembre",
 				"Diciembre",
 			];
-			alert(meses);
-
-			// 2.2
-			for (let $i = 0; $i < meses.length; $i++) {
-				console.log(meses[$i]);
-				alert(meses[$i]);
+			console.assert(meses[0] == "Enero");
+			console.assert(meses[11] == "Diciembre");
+			function funcion1() {
+				alert(meses[0]);
+				alert(meses[1]);
+				alert(meses[2]);
+				alert(meses[3]);
+				alert(meses[4]);
+				alert(meses[5]);
+				alert(meses[6]);
+				alert(meses[7]);
+				alert(meses[8]);
+				alert(meses[9]);
+				alert(meses[10]);
+				alert(meses[11]);
 			}
+			// 2.2
+			// for (let $i = 0; $i < meses.length; $i++) {
+			// 	console.log(meses[$i]);
+			// 	alert(meses[$i]);
+			// }
 
 			// 2.1
 			// let months = meses.length;
@@ -64,10 +78,16 @@
 			// alert(number);
 
 			// 2.3;
-			meses.forEach((meses) => alert(meses));
+			// meses.forEach((meses) => alert(meses));
 		</script>
 	</head>
 	<body>
-		<p>Esta página muestra un mensaje complejo</p>
+		<p id="texto"></p>
+		<br />
+		<button
+			onclick="document.getElementById('texto').innerHTML+=funcion1(prompt('add un texto:'))"
+		>
+			prompt
+		</button>
 	</body>
 </html>

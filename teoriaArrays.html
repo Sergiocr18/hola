@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TeoriaArrays</title>
+	</head>
+	<body>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+		<p id="demo2"></p>
+		<p id="demo3"></p>
+		<p>-</p>
+		<p id="demo4"></p>
+		<p id="demo5"></p>
+		<p id="demo6"></p>
+		<p>-</p>
+		<p id="demo7"></p>
+		<p id="demo8"></p>
+		<p id="demo9"></p>
+		<p id="demo10"></p>
+
+		<script>
+			const numeros = [4, 3, 5, 1, 2, 11, 10, 10.5];
+			let numerosOrdenados = ordenarNumeros(numeros);
+			// document.getElementById("demo1").innerHTML = numerosOrdenados.toString();
+			function ordenarNumeros(lista) {
+				let copiaLista = [].concat(lista);
+				let arrayDev = []; //return
+				//lista
+				//comparatorNumber(a,b)
+				while (copiaLista.length > 1) {
+					let temporal = lista[0];
+
+					for (let i = 0; i < lista.length; i++) {
+						if (temporal > copiaLista[i]) {
+							//buscar el numero mas grande
+							temporal = copiaLista[i];
+						}
+					}
+					console.log(temporal);
+					arrayDev.push(temporal);
+					console.log(arrayDev);
+					let salidaIndexOf = copiaLista.indexOf(temporal);
+					console.log(salidaIndexOf);
+
+					if (salidaIndexOf > 0) {
+						copiaLista.splice(salidaIndexOf, 1);
+					} else {
+						copiaLista.shift();
+					}
+					console.log(copiaLista);
+					console.log("");
+					debugger;
+				}
+			}
+			copiaLista.splice(copiaLista.indexOf(temporal), 1); //splice busca la posicion 3 y lo elimina
+			console.log(copiaLista);
+
+			comparatorNumber(a,b);
+			return arrayDev;
+			}
+			function comparatorNumber(a, b) {
+			 return a - b;
+			}
+
+			const letras = ["B", "C", "D", "AB", "AA"];
+			document.getElementById("demo1").innerHTML = letras.toString();
+			letras.sort();
+			document.getElementById("demo2").innerHTML = letras.toString();
+			letras.reverse();
+			document.getElementById("demo3").innerHTML = letras.toString();
+
+			const numeros = [4, 3, 5, 1, 2, 11, 10, 10.5];
+			document.getElementById("demo4").innerHTML = numeros.toString();
+			numeros.sort();
+			document.getElementById("demo5").innerHTML = numeros.toString();
+			numeros.reverse();
+			document.getElementById("demo6").innerHTML = numeros.toString();
+			numeros.sort(function (a, b) {
+				return a - b;
+			});
+			document.getElementById("demo10").innerHTML = numeros.toString();
+
+			const numerosYletras = [
+				"B",
+				"C",
+				"D",
+				"AB",
+				"AA",
+				4,
+				3,
+				5,
+				1,
+				2,
+				11,
+				10,
+				"b",
+				"c",
+				"d",
+				"ab",
+				"aa",
+			];
+			document.getElementById("demo7").innerHTML = numerosYletras.toString();
+			numerosYletras.sort(); //ordena unicodes
+			document.getElementById("demo8").innerHTML = numerosYletras.toString();
+			numerosYletras.reverse(); // hace lo mismo que reverse
+			document.getElementById("demo9").innerHTML = numerosYletras.toString();
+
+			const fruits = ["Banana", "Orange", "Apple", "Mango"];
+			document.getElementById("demo1").innerHTML = fruits.toString();
+			document.getElementById("demo2").innerHTML = fruits.join(" * ");
+			fruits.pop();Despues de Mango
+			document.getElementById("demo3").innerHTML = fruits.join(" - ");
+			fruits.push("kiwi");Despues de Mango
+			document.getElementById("demo4").innerHTML = fruits.join(" - ");
+			fruits.shift(); Antes de Banana
+			document.getElementById("demo5").innerHTML = fruits.join(" - ");
+			fruits.unshift("Lemon");// Antes de Banana
+			document.getElementById("demo6").innerHTML = fruits.join(" - ");
+			fruits[fruits.length] = "Apple";
+			fruits[0]="Apple"//añade una fruta
+			document.getElementById("demo7").innerHTML = fruits.join(" - ");
+			delete fruits[0]; //delete es quitar
+			document.getElementById("demo8").innerHTML = fruits.join(" - ");
+		</script>
+	</body>
+</html>

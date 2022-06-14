@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			//BOTON 1: crear cookie
+			//seleccionar durante cuanto tiempo existiera(1 dia,2...)
+			//seleccionar una fecha
+			//BOTON 2: comprobar si existe
+			//BOTON 3: leer contenido
+			//BOTON 4: modificar cookie
+			//BOTON 5: borrar cookie
+
+			function setCookie(cname, cvalue, exdays) {
+				// console.log(cname);
+				// console.log(cvalue);
+				// console.log(exdays);
+				const d = new Date();
+				d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = encodeURIComponent(cname) + "=" + encodeURIComponent(cvalue) + ";" + expires + ";path=/";
+			return cname
+			}
+
+			function getCookie(cname) {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(";");
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					// while (c.charAt(0) == " ") {
+					// 	c = c.substring(1);
+					// }
+					c = c.trim()
+					// console.log("XX" + c);
+					// console.log("name-" + name);
+					// console.log(c.indexOf(name));
+					if (c.indexOf(name) == 0) {
+						return "Existe"
+					}
+				}
+				return "No existe";
+			}
+			// console.log("AAAAAAAAAAA");
+			// console.log(getCookie(setCookie("cname","cvalue",6)));
+			// console.log("BBBBBBBBBBB");
+
+			console.assert(getCookie(setCookie("cname","cvalue",6))=="Existe")
+			
+
+			function checkCookie() {
+				let user = getCookie("username");
+				if (user != "") {
+					alert("Welcome again " + user);
+				} else {
+					user = prompt("Please enter your name:", "");
+					if (user != "" && user != null) {
+						setCookie("username", user, 30);
+					}
+				}
+			}
+	
+			// console.assert(checkCookie)
+			function cookieEnabled(){
+				if(navigator.cookieEnabled) {
+					// cookies are enabled
+					// read, write and delete 
+					alert("estan habilitadas")
+				}
+				else {
+					// cookies are disabled, show an error message to the user, or follow other alternative
+					alert("no estan habilitadas")
+				}
+			}
+			// console.assert(cookieEnabled)
+		</script>
+	</head>
+	<script defer src="./cookie.js"></script>
+		<!-- <button onclick = "fun1()" >check cookie</button> -->
+		<br />
+		<br />
+		<br />
+		<button id='botonCrear'>
+			create cookie
+		</button>
+		<div id="preg1" style="visibility: hidden; background-color: brown">
+			<input type="text" placeholder="nameCookie" id="nameCookie" />
+			<input type="text" placeholder="valueCookie" id="valueCookie" />
+			<button
+				id="createCookie2"
+			>
+				Seleccionar una fecha
+			</button>
+			<button id="botonSelDias">Seleccionar cantidad de dias</button>
+		</div>
+		<div id="fecha" style="visibility: hidden">
+			<input id="inputDate" type="date" />
+			<!-- <button id="botonSelDias"></button> -->
+			<button onclick= "setCookie(document.getElementById('nameCookie').value,document.getElementById('valueCookie').value,document.getElementById('inputDate').value)" id="botonCrearcookie">CrearCookie</button>
+		</div>
+		<div id="cantidad" style="visibility: hidden">
+			<input type="text" placeholder="dia" />
+			<input type="text" placeholder="mes" />
+			<input type="text" placeholder="años" />
+		</div>
+		<button
+		>
+			Si existe
+		</button>
+		<br />
+		<br />
+		<button id="leer contenido"
+		>
+			leer contenido
+		</button>
+		<br />
+		<br />
+		<button id="modificar"
+		
+		>
+			modificar cookie
+		</button>
+		<br />
+		<br />
+		<button id="borrar"
+		
+		>
+			eliminar cookie
+		</button>
+		<br  />
+		<br  />
+		<input type="date" id="elDate"/>
+		<button onclick="funcion9">AAA</button>
+
+		<select id="selector" name="" ></select>
+		<button onclick="alert(getCookie(prompt('Nombre de la cookie')))">check cookie</button>
+		 <script>
+			select = document.getElementById("selector");
+			listCookies();
+			function listCookies() {
+				var theCookies = document.cookie.split(";");
+				select.innerHTML = ""
+				for (var i = 1; i <= theCookies.length; i++) {
+					var opt = document.createElement("option");
+					opt.value = theCookies[i - 1];
+					opt.innerHTML = theCookies[i - 1].split("=")[0];
+					select.appendChild(opt);
+				}
+			}
+			// console.assert(listCookies)
+			function funcion9() {
+				let campo =document.getElementById("elDate").value;
+				let resto = new Date(campo) -  new Date()
+				let dias = resto / 1000 / 60 / 60 / 24;
+				console.log(dias);
+				console.log(Math.ceil(dias));
+
+				let nameCookie = document.getElementById("nameCookie").value;
+				setCookie(nameCookie, document.getElementById("valueCookie").value,Math.ceil)
+				console.log("Created cookie= " + getCookie(nameCookie));
+			
+			}
+			// console.assert(funcion9)
+		 </script>
+	</body>
+</html>

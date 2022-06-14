@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title></title>
+		<script type="text/javascript">
+			function info(texto) {
+				var resultado = 'El texto "' + texto + '" ';
+
+				// Comprobar mayúsculas y minúsculas
+				if (texto == texto.toUpperCase()) {
+					resultado += " está formada sólo por mayúsculas";
+					return "esta formada solo por mayúsculas";
+				} else if (texto == texto.toLowerCase()) {
+					resultado += " está formada sólo por minúsculas";
+					return " está formada sólo por minúsculas";
+				} else {
+					resultado += " está formada por mayúsculas y minúsculas";
+					return " está formada por mayúsculas y minúsculas";
+				}
+				// return resultado;
+			}
+
+			alert(info("OVNI = OBJETO VOLADOR NO IDENTIFICADO"));
+			alert(info("En un lugar de la mancha..."));
+			alert(info("hola que tal"));
+
+			console.log(info("En un lugar de la mancha..."));
+			console.assert(
+				info("OVNI = OBJETO VOLADOR NO IDENTIFICADO") ==
+					"esta formada solo por mayúsculas"
+			);
+			console.assert(
+				info("hola buenos dias") == " está formada sólo por minúsculas"
+			);
+			console.assert(
+				info("En un lugar de la mancha...") ==
+					" está formada por mayúsculas y minúsculas"
+			);
+
+			function funcion1() {
+				alert(info("OVNI = OBJETO VOLADOR NO IDENTIFICADO"));
+				alert(info("En un lugar de la mancha..."));
+				alert(info("hola que tal"));
+			}
+		</script>
+	</head>
+	<body>
+		<p id="texto"></p>
+		<button
+			onclick="document.getElementById('texto').innerHTML+=funcion1(prompt('introduce un numero'))"
+		>
+			pedir numero
+		</button>
+		<script></script>
+	</body>
+</html>

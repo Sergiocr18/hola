@@ -2,19 +2,19 @@
 	<head> </head>
 	<body>
 		<script>
-			lista1 = ["a", "b", "c"];
-			lista2 = ["d", "e", "f"];
-			listaL = [lista1, lista2];
+			// lista1 = ["a", "b", "c"];
+			// lista2 = ["d", "e", "f"];
+			// listaL = [lista1, lista2];
 
-			console.log(listaL);
-			console.log("");
+			// console.log(listaL);
+			// console.log("");
 
-			for (let i = 0; i < listaL.length; i++) {
-				//console.log(listaL[i]);
-				for (let a = 0; a < listaL[i].length; a++) {
-					console.log(listaL[i][a]);
-				}
-			}
+			// for (let i = 0; i < listaL.length; i++) {
+			// 	//console.log(listaL[i]);
+			// 	for (let a = 0; a < listaL[i].length; a++) {
+			// 		console.log(listaL[i][a]);
+			// 	}
+			// }
 
 			// let number = ""
 			// console.log(number == "");//false
@@ -66,6 +66,74 @@
 			// alert("");
 			// 			console.log(number);
 			//
+
+			// la funcion cosa hace x
+			// p_texto:
+			// p_texto.innerHTML += "<br>texto"
+
+			// function cosa(p_texto){}
+			// function cosa(p_texto, prompt_number) {
+			// let prompt_number = prompt("add number");
+			// 	console.log("prompt_number == " + (prompt_number == ""));
+			// 	console.log("isNaN(prompt_number) " + isNaN(prompt_number));
+
+			// 	function pedirNumero($p_texto) {
+			// 		prompt_number = prompt("add number");
+			// 		if (test1(prompt_number) != false) {
+			// 			$p_texto.innerHTML += "<br>" + prompt_number;
+			// 		} else {
+			// 			$p_texto.innerHTML += "<br> No es nu numero valido";
+			// 		}
+			// 	}
+			// 	function test1(prompt_number) {
+			// 		if (
+			// 			prompt_number !== "" &&
+			// 			!isNaN(prompt_number) &&
+			// 			(prompt_number < 0 || prompt_number > 99999999)
+			// 		) {
+			// 			//solo numeros
+			// 			// p_texto.innerHTML += "<br>texto" + prompt_number;
+			// 			return prompt_number;
+			// 		} else {
+			// 			return false;
+			// 		}
+			// 	}
+
+			function funcion1($texto) {
+				if ($texto != "" && isNaN($texto)) {
+					return ($texto + "").toUpperCase() + "<br>";
+				} else {
+					return false;
+				}
+			}
+		</script>
+		<p id="texto"></p>
+		<br />
+		<button
+			onclick="document.getElementById('texto').innerHTML+=funcion1(prompt('add un texto:'))"
+		>
+			prompt
+		</button>
+		<script>
+			console.assert(funcion1("") == false); //error
+			console.assert(funcion1("a") == "A<br>");
+			console.assert(funcion1("abc") == "ABC<br>");
+			console.assert(funcion1("a12b") == "A12B<br>");
+			console.assert(funcion1("1ab2") == "1AB2<br>");
+			console.assert(funcion1("AbC") == "ABC<br>", "AbC");
+			console.assert(funcion1("ABC") == "ABC<br>", "ABC");
+			console.assert(funcion1("-4") == false, "-4"); //error // las comillas son para escribir un mensaje que te ayude
+			console.assert(funcion1("4") == false); //error
+
+			// cosa(document.getElementById("texto"), "");
+			// console.log("");
+			// cosa(document.getElementById("texto"), -1);
+			// console.log("");
+			// cosa(document.getElementById("texto"), 1);
+			// console.log("");
+			// cosa(document.getElementById("texto"), 99999999);
+			// console.log("");
+			// cosa(document.getElementById("texto"), "asd");
 		</script>
 	</body>
 </html>

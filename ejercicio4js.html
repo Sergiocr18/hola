@@ -2,17 +2,34 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>Ejercicio 1 - Mostrar mensajes complejos</title>
+		<title>Ejercicio 4</title>
 		<script type="text/javascript">
-			var text = "Introduce un número";
-			var result = text.toUpperCase();
-
-			document.write("asd".toUpperCase());
-			document.write("<br><br>");
-			document.write("ASD".toLowerCase());
+			function funcion1($texto) {
+				if ($texto != "" && isNaN($texto)) {
+					return ($texto + "").toUpperCase() + "<br>";
+				} else {
+					return true;
+				}
+			}
+		</script>
+		<p id="texto"></p>
+		<br />
+		<button
+			onclick="document.getElementById('texto').innerHTML+=funcion1(prompt('add un texto:'))"
+		>
+			prompt
+		</button>
+		<script>
+			console.assert(funcion1("") == true); //error
+			console.assert(funcion1("a") == "A<br>");
+			console.assert(funcion1("abc") == "ABC<br>");
+			console.assert(funcion1("a12b") == "A12B<br>");
+			console.assert(funcion1("1ab2") == "1AB2<br>");
+			console.assert(funcion1("AbC") == "ABC<br>", "AbC");
+			console.assert(funcion1("ABC") == "ABC<br>", "ABC");
+			console.assert(funcion1("-4") == true, "-4"); //error // las comillas son para escribir un mensaje que te ayude
+			console.assert(funcion1("10") == true); //error
 		</script>
 	</head>
-	<body>
-		<p>Esta página muestra un mensaje complejo</p>
-	</body>
+	<body></body>
 </html>
